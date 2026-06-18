@@ -1,0 +1,69 @@
+# TNTProtection 配置文件
+# 我的世界TNT防爆保护插件
+
+# 插件消息语言设置 (目前支持: zh_CN, en_US)
+locale: zh_CN
+
+# 保护区域设置
+region:
+  # 单个玩家最大保护区域数量 (-1表示无限制)
+  max-regions-per-player: 10
+  # 是否启用区域保护功能
+  enabled: true
+  # 区域选择工具类型 (GOLDEN_AXE)
+  selection-tool: GOLDEN_AXE
+  # 区域选择工具名称 (支持颜色代码)
+  selection-tool-name: "&6[区域选择斧]&r"
+
+# 方块保护设置
+block-protection:
+  # 是否启用方块保护功能
+  enabled: true
+  # 默认防爆方块ID列表
+  default-protected-blocks:
+    - DIAMOND_BLOCK
+    - EMERALD_BLOCK
+    - GOLD_BLOCK
+    - IRON_BLOCK
+    - OBSIDIAN
+    - BEDROCK
+    - ENDER_CHEST
+    - ANVIL
+    - CHEST
+    - TRAPPED_CHEST
+
+# TNT爆炸设置
+explosion:
+  # 是否完全取消TNT爆炸 (false则只保护指定区域/方块)
+  cancel-explosion: false
+  # TNT爆炸破坏范围 (设置为0则完全取消破坏)
+  explosion-radius: 0
+  # 是否显示爆炸保护提示
+  show-protection-message: true
+  # 是否记录爆炸事件到控制台
+  log-explosions: true
+
+# 权限设置
+permissions:
+  # 默认每个玩家可创建的防爆方块数量 (-1表示无限制)
+  max-protected-blocks-per-player: -1
+
+# 经济设置 (可选)
+economy:
+  # 是否启用经济系统
+  enabled: false
+  # 创建区域收费金额
+  region-creation-cost: 0.0
+  # 添加防爆方块收费金额
+  block-protection-cost: 0.0
+
+# 高级设置
+advanced:
+  # 事件处理优先级 (LOW, NORMAL, HIGH)
+  event-priority: HIGH
+  # 是否在爆炸时播放声音
+  play-sound: true
+  # 保护成功时的消息颜色
+  success-color: "&a"
+  # 错误消息颜色
+  error-color: "&c"

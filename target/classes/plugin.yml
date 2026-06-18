@@ -1,0 +1,30 @@
+name: FKTNT
+version: 1.0.0
+main: com.tntprotection.TNTProtectionPlugin
+api-version: '1.8'
+description: FKTNT插件 - 我的世界TNT防爆保护插件 - 支持区域保护和方块保护
+author: xiaoyu
+website: https://github.com/xiaoyu
+
+commands:
+  tnt:
+    description: FKTNT防爆保护插件主命令
+    usage: /<command> [args]
+    aliases: [tntp, tntprotect, fktnt]
+
+permissions:
+  tntprotection.use:
+    description: 允许使用/tnt命令获取金斧头
+    default: true
+  tntprotection.admin:
+    description: 允许管理保护区域和配置
+    default: op
+  tntprotection.bypass:
+    description: 绕过TNT保护限制（如TNT可以破坏受保护的区域）
+    default: op
+  tntprotection.limit.*:
+    description: 无限制创建保护区域
+    default: op
+  tntprotection.hq:
+    description: 允许使用/tnt hq命令获取防爆方块
+    default: true
